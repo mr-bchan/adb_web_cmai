@@ -1,7 +1,7 @@
 html, body {
 	/*font-family: 'Roboto', sans-serif;*/
-	font-family: 'Quicksand', sans-serif;
-
+	/*font-family: 'Quicksand', sans-serif;*/
+	font-family: 'Poppins', sans-serif;
 
 }
 
@@ -35,6 +35,7 @@ header.header .header-container {
 	width: 50%;
 	padding : 50px;
 	color: #fff;
+	z-index: 1 !important;
 }
 
 header.header h1.app-name{
@@ -49,7 +50,7 @@ header.header  .search-div {
 
 .search-div form h2 {
 	text-align: left;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 .badge {
@@ -68,10 +69,6 @@ section.section {
 	max-width: 100%;
 	width: 85%;
 	margin: 0 auto;
-}
-
-.result-header {|
-
 }
 
 .result-header .result-count{
@@ -115,6 +112,9 @@ section.section {
     border-radius: 20px;
     background: white;
     margin-bottom: 20px;
+    -webkit-box-shadow: 0px 4px 25px 0px rgba(226,235,245,0.49);
+	-moz-box-shadow: 0px 4px 25px 0px rgba(226,235,245,0.49);
+	box-shadow: 0px 4px 25px 0px rgba(226,235,245,0.49);
 }
 
 .a-provided-by {
@@ -122,9 +122,14 @@ section.section {
     text-decoration: underline;
 }
 
+.a-provided-by : hover {
+	color: red !important;
+}
+
 
 .search-result-item-title {
 	cursor: pointer;
+	font-weight:500;
 }
 
 .search-result-item-title i{
@@ -145,9 +150,21 @@ section.section {
 
 */
 .search-result-item-title i.far.fa-circle {
-	color: #dcdbde;
+	color: #a9b8c2;
 }
 
+.tab-pane-list .search-result-item-title i.far.fa-circle {
+	color: #404a51;
+}
+
+.tab-pane-list .search-result-item-details a {
+	color: #868795;
+	font-size: 13px;
+}
+
+.tab-pane-list h5 {
+	margin-bottom: 0.2rem;
+}
 
 .btn-toggle-sidebar {
     padding: 10px 15px;
@@ -181,7 +198,7 @@ section.section {
 
 aside.sidebar {
 	position: absolute;
-	top: -48px;
+	top: -51px;
 	right: 0;
 	background: #181c1f;
 	color: white;
@@ -217,6 +234,7 @@ aside.sidebar .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
 
 aside.sidebar .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active .count {
 	color: #7760f2;
+	font-size: 30px;
 }
 
 aside.sidebar .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
@@ -224,7 +242,11 @@ aside.sidebar .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
     border: 0;
     background: #23282c;
     min-width: 90px;
-    color:#51555d;
+    color:#595c65;
+}
+
+aside.sidebar .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link .count {
+	font-size: 30px;
 }
 
 .btn-generate-tree {
@@ -235,7 +257,7 @@ aside.sidebar .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
 	margin: 0;
 	padding: 10px;
 	font-size: 1.2rem;
-	font-weight: bold;
+	font-weight: 500;
 }
 
 .btn-toggle-sidebar-container{
@@ -282,10 +304,10 @@ aside.sidebar .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
   fill: #fff;
   width: 85px;
   height: 55px;
-  background-color: #000;
+  background-color: #0c1932;
   border-radius: 33px;
   transition: all .2s ease-out, color 0.2s ease-out;
-  padding: 0px 16px;
+  padding: 14px 16px;
 }
 
 /*.btn-search:hover, .btn-search:focus {
@@ -329,5 +351,45 @@ aside.sidebar .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
 
 .btn-active {
 	color: white;
-    background: #007bff;
+    background: #686af0;
+}
+
+.center {
+	text-align: center;
+}
+
+.topics-label {
+	padding-right: 16px;
+}
+
+.logo {
+	top: 3%;
+    right: 83%;
+    position: absolute;
+}
+
+.logo img {
+	width: 180px;
+}
+
+.badge-document {
+	color: #fff;
+    background-color: #a9b8c2;
+}
+
+.badge-primary {
+	background-color: #198ee0;
+}
+
+.badge {
+	font-weight: 400;
+	padding: 6px 12px;
+}
+
+
+#particles-js canvas {
+    position: absolute !important;
+    width: 100% !important;
+    left: 0 !important;
+    top: 12% !important; 
 }

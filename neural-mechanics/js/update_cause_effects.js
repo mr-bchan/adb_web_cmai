@@ -43,9 +43,11 @@ function update_cause_effect(keyword){
 		$('#tab-cause > .tab-pane-list').remove()
 		$('#tab-effect > .tab-pane-list').remove()
 		
-
-		results.forEach(function(result){
+		$('#tab-all > .py-4').remove()
+		$('#tab-cause > .py-4').remove()
+		$('#tab-effect > .py-4').remove()
 		
+		results.forEach(function(result){
 		div_html = 
 			   `<div class="tab-pane-list">
 				<h5 class="search-result-item-title"><i class="far fa-circle"></i>${result.text}</h5>
@@ -81,5 +83,4 @@ function update_cause_effect(keyword){
         if($('#tab-effect > .tab-pane-list').length == 0){
         	$('#tabl-effect').append(empty_html)
         }
-
 }
