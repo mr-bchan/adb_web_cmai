@@ -223,10 +223,10 @@
                 </div>
                 <div class="tab-pane" id="tab-effect">
                     <p><span class="tab-selected-count">0</span> effect(s) selected</p>
-                    <div class="text-center py-4">
+<!--                     <div class="text-center py-4">
                         <p>No Record</p>
                         <p>Please select on the problem to view list</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <button class="btn-generate-tree">Generate Tree</button>
@@ -243,6 +243,7 @@
     <script src="js/requests.js" ></script>
     <script src="js/config.js" ></script>
     <script src="js/update_problems.js" ></script>
+    <script src="js/update_cause_effects.js" ></script>
 
     <script type="text/javascript">
     $(document).ready(function() {
@@ -251,25 +252,6 @@
         } else {
             $('.btn-generate-tree').removeClass('btn-active');
         }
-
-        // checkboxes result
-        $('.search-result-item-title').on('click', function(event) {
-            event.preventDefault();
-            $(this).find('i').removeClass();
-            var isSelected = $(this).hasClass('selected');
-            if (isSelected) {
-                $(this).find('i').addClass('far fa-circle');
-                $(this).removeClass('selected');
-            } else {
-                $(this).find('i').addClass('fas fa-check-circle');
-                $(this).addClass('selected');
-            }
-            var selector = $(this);
-            var tabId = selector.parent().parent().attr('id');
-            var selectedItems = $("#"+tabId).find('h5.selected').length;
-
-            selector.parent().siblings().find('span.tab-selected-count').text(selectedItems);
-        });
 
         // nav tab 
 
@@ -298,15 +280,6 @@
             /* Act on the event */
         });
 
-        $('.search-result-item .search-result-item-title').on('click', function() {
-            var isSelected = $(this).hasClass('selected');
-
-            if (isSelected) {
-                if ($('.sidebar').hasClass('d-none')) {
-                    $("#sidebar-aside").trigger('click');
-                }
-            }
-        });
 
         $('.btn-search').on('click', function()
         {   

@@ -388,3 +388,62 @@ var POST_PROBLEM_URL_DUMMY_RESULT = {
     },
     "success": true
 }
+
+var POST_CAUSE_EFFECT_URL_DUMMY_RESULT = {
+    "data": {
+        "data": [
+            {
+                "country": "People’s Republic of China",
+                "link": "https://www.adb.org/projects/documents/anhui-intermodal-sustainable-transport-project-rrp",
+                "match": [],
+                "project_no": "45021-002",
+                "score": 0.592244,
+                "section": "II. THE PROJECT",
+                "source": " rrp ",
+                "subsection": "A. Rationale",
+                "text": "road transport for moving freight",
+                "title": "Anhui Intermodal Sustainable Transport Project",
+                "type": "cause"
+            },
+            {
+                "country": "People’s Republic of China",
+                "link": "https://www.adb.org/projects/documents/anhui-intermodal-sustainable-transport-project-rrp",
+                "match": [],
+                "project_no": "45021-002",
+                "score": 0.592244,
+                "section": "II. THE PROJECT",
+                "source": " rrp ",
+                "subsection": "A. Rationale",
+                "text": "local air pollution",
+                "title": "Anhui Intermodal Sustainable Transport Project",
+                "type": "effect"
+            },
+            {
+                "country": "People’s Republic of China",
+                "link": "https://www.adb.org/projects/documents/anhui-intermodal-sustainable-transport-project-rrp",
+                "match": [],
+                "project_no": "45021-002",
+                "score": 0.013486554,
+                "section": "II. THE PROJECT",
+                "source": " rrp ",
+                "subsection": "A. Rationale",
+                "text": "global climate change",
+                "title": "Anhui Intermodal Sustainable Transport Project",
+                "type": "effect"
+            }
+        ],
+        "related_keywords": [
+            "pollutants",
+            "agriculture",
+            "refers",
+            "coal",
+            "shanghai",
+            "emissions",
+            "rivers",
+            "requires",
+            "hubei",
+            "congestion"
+        ]
+    },
+    "success": true
+}
