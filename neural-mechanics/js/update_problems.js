@@ -77,40 +77,39 @@ function update_problems(keyword){
     $('#div-result-header').text(result_text)
 
 
-    /** Update event handlers **/
+              // checkboxes result
+            $('.search-result-item-title').on('click', function(event) {
+                event.preventDefault();
+                $(this).find('i').removeClass();
+                var isSelected = $(this).hasClass('selected');
+                if (isSelected) {
+                    $(this).find('i').addClass('far fa-circle');
+                    $(this).removeClass('selected');
+                } else {
+                    $(this).find('i').addClass('fas fa-check-circle');
+                    $(this).addClass('selected');
+                }
+                var selector = $(this);
+                var tabId = selector.parent().parent().attr('id');
+                var selectedItems = $("#"+tabId).find('h5.selected').length;
 
-    // checkboxes result
-    $('.search-result-item-title').on('click', function(event) {
-        event.preventDefault();
-        $(this).find('i').removeClass();
-        var isSelected = $(this).hasClass('selected');
-        if (isSelected) {
-            $(this).find('i').addClass('far fa-circle');
-            $(this).removeClass('selected');
-        } else {
-            $(this).find('i').addClass('fas fa-check-circle');
-            $(this).addClass('selected');
-        }
-        var selector = $(this);
-        var tabId = selector.parent().parent().attr('id');
-        var selectedItems = $("#"+tabId).find('h5.selected').length;
-
-        // get text label
-        keyword = selector[0].textContent
-        update_cause_effect(keyword=keyword)
-        
-        selector.parent().siblings().find('span.tab-selected-count').text(selectedItems);
-    });
+                // get text label
+                keyword = selector[0].textContent
+                update_cause_effect(keyword=keyword)
+                
+                selector.parent().siblings().find('span.tab-selected-count').text(selectedItems);
+            });
 
 
-    $('.search-result-item .search-result-item-title').on('click', function() {
-        var isSelected = $(this).hasClass('selected');
+            $('.search-result-item .search-result-item-title').on('click', function() {
+                var isSelected = $(this).hasClass('selected');
 
-        if (isSelected) {
-            if ($('.sidebar').hasClass('d-none')) {
-                $("#sidebar-aside").trigger('click');
-            }
-        }
-    });
+                if (isSelected) {
+                    if ($('.sidebar').hasClass('d-none')) {
+                        $("#sidebar-aside").trigger('click');
+                    }
+                }
+            });
+
 
 }

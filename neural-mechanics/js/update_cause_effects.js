@@ -42,7 +42,8 @@ function update_cause_effect(keyword){
 		$('#tab-all > .tab-pane-list').remove()
 		$('#tab-cause > .tab-pane-list').remove()
 		$('#tab-effect > .tab-pane-list').remove()
-			
+		
+
 		results.forEach(function(result){
 		
 		div_html = 
@@ -65,14 +66,18 @@ function update_cause_effect(keyword){
                     </div>`
 
         // Add empty details if no divs found
+
+        $('.count')[0].textContent = $('#tab-all > .tab-pane-list').length
         if($('#tab-all > .tab-pane-list').length == 0){
         	$('#tabl-all').append(empty_html)
         }
 
+        $('.count')[1].textContent = $('#tab-cause > .tab-pane-list').length
         if($('#tab-cause > .tab-pane-list').length == 0){
         	$('#tabl-cause').append(empty_html)
         }
 
+		$('.count')[2].textContent = $('#tab-effect > .tab-pane-list').length
         if($('#tab-effect > .tab-pane-list').length == 0){
         	$('#tabl-effect').append(empty_html)
         }
