@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    
     <title>Search | Asian Development Bank</title>
 </head>
 
@@ -28,7 +29,7 @@
                         <!--             <input type="text" class="form-control" name="search" placeholder="Search">
 <button><i class="fas fa-search"></i></button> -->
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control txt-search" placeholder="Enter your topic or keywords here" aria-label="Search" aria-describedby="Search">
+                            <input id="search-textbox" type="text" class="form-control txt-search" placeholder="Enter your topic or keywords here" aria-label="Search" aria-describedby="Search">
                             <!-- <div class="input-group-append">
                                 <span class="input-group-text" id=""><i class="fas fa-search"></i></span>
                                 <button class="input-group-button" type="submit"><i class="fas fa-search"></i></button>
@@ -61,7 +62,7 @@
     <div class="section-container">
         <section class="section">
             <div class="result-header d-flex justify-content-between mb-4">
-                <h4 class="">30 problems found in Beijing Air Pollution</h4>
+                <h4 id="div-result-header" class="">30 problems found in Beijing Air Pollution</h4>
                 <button class="btn btn-primary btn-show-all btn-primary-custom">Show all</button>
             </div>
             <ul class="search-result-list">
@@ -237,6 +238,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- User functions declared here -->
+    <script src="js/requests.js" ></script>
+    <script src="js/config.js" ></script>
+    <script src="js/update_problems.js" ></script>
+
     <script type="text/javascript">
     $(document).ready(function() {
         if ($("#tab-all").find('.tab-pane-list').length > 0) {
@@ -302,7 +309,10 @@
         });
 
         $('.btn-search').on('click', function()
-        {
+        {   
+            keyword = $("#search-textbox")[0].value
+            update_problems(keyword=keyword)
+
             $('div.section-container,button.btn-toggle-sidebar').attr({'style': 'display:block;'});
 
             $('html,body').animate({
