@@ -380,9 +380,9 @@
     <!-- User functions declared here -->
     <script src="js/requests.js" ></script>
     <script src="js/config.js" ></script>
-    <script src="js/utils.js" ></script>
     <script src="js/update_problems.js" ></script>
     <script src="js/update_cause_effects.js" ></script>
+    <script src="js/update_tree.js" ></script>
 
     <!-- stats.js -->
     <script src="js/lib/stats.js"></script>
@@ -485,19 +485,25 @@
 
         $(".btn-generate-tree").on('click', function()
         {
+
+            // Get values from user selections
+            keyword = $(".txt-search").val()
+            problems = $('.search-result-list h5.selected').map(function(){ return this.innerText }).get()
+            causes = $('#tab-cause h5.selected').map(function(){ return this.innerText }).get()
+            effects = $('#tab-effect h5.selected').map(function(){ return this.innerText }).get()
+
+            data = {
+                'cause':causes,
+                'problem': problems,
+                'effect': effects,
+                'keyword': keyword
+            }
+
+            sessionStorage.setItem('data', JSON.stringify(data));
+
             // window.location = "tree.html"
             window.open('tree.html','_blank');
 
-            responses = {
-                'cause':['c1', 'c2', 'c3'],
-                'problem': ['p1', 'p2', 'p3'],
-                'effect': ['e1', 'e2','e3']
-            }
-
-            // Get children of UL Class .search-result-list
-            console.log($('.search-result-list').children())
-
-            sessionStorage.setItem('responses', JSON.stringify(responses));
         })
 
     });

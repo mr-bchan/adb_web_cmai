@@ -38,11 +38,11 @@
 							</svg>
     					</button>
 	                </div>
-	            	<h2 class="title">Beijing Air Pollution</h2>
+	            	<h2 class="title text-capitalize">Beijing Air Pollution</h2>
 	            	<div class="sub-title">
 	                    <p> 
 	                    	<i class="fa fa-pen" style="font-size:18px"></i>
-	                    	Created at March 27, 2019 
+	                    	<span class="sub-title-text"> Created at March 27, 2019 </span>
 	                    </p>
 	                </div>
             	</div>
@@ -233,14 +233,22 @@
 
     <!-- User functions declared here -->
     <script src="js/requests.js" ></script>
-    <script src="js/config.js" ></script>
-    <script src="js/update_problems.js" ></script>
-    <script src="js/update_cause_effects.js" ></script>
+    <script src="js/update_writer.js"></script>
 
     <!-- stats.js -->
     <script src="js/lib/stats.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
+
+        data = sessionStorage.getItem('tree_data');
+
+        if(data){
+             data = JSON.parse(data)
+             update_writer(data)
+        }
+        else{
+            data = []
+        }
         
     });
 

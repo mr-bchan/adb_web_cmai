@@ -21,6 +21,9 @@ function update_cause_effect(keyword){
 
 			var results = data['data']['data']
 
+			// Limit results to N only
+			results = results.slice(0, 15);
+
 			/*
 		    <div class="tab-pane active" id="tab-all">
 		        <p><span class="tab-selected-count">0</span> selected item(s)</p>
