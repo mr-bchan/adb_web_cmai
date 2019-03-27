@@ -8,7 +8,7 @@
 // var API_ENDPOINT = 'http://neuralmechanics.ai/adb-api/'
 
 /* Local setup */
-var API_ENDPOINT = 'http://0.0.0.0:8000/'
+var API_ENDPOINT = 'http://192.168.0.37:8000/'
 
 
 // API POST URLs 
