@@ -21,10 +21,12 @@
             <img src="images/logo.png">
         </div>
         <div class="btn-menu">
-            <button class="btn btn-primary" id="close-window">Close</button>
+            <button class="btn btn-primary">Close</button>
             <button class="btn btn-primary">Save</button>
-            <button class="btn btn-primary" id="export-window">Export</button>
-            <button class="btn btn-primary">Generate</button>
+            <button class="btn btn-primary">Export</button>
+            <a href="ghost-writer.html" target="_blank">    
+                <button class="btn btn-primary">Generate</button>
+            </a>
         </div>
     </header>
     <section class="container-fluid">
@@ -39,7 +41,7 @@
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item asd">
-                            <span class="data-view" data-group="cause" data-value="test 1">test 1</span>
+                            <span class="data-view" data-group="cause" data-value="road transport for moving freight">road transport for moving freight</span>
                             <span class="float-right">
                                 <button class="btn-edit">
                                     <i class="fas fa-pencil-alt"></i>
@@ -49,7 +51,7 @@
                                 </button>
                             </span>
                         </li>
-                        <li class="list-group-item asd">
+                        <!--<li class="list-group-item asd">
                             <span class="data-view" data-group="cause" data-value="test 2">test 2</span>
                             <span class="float-right">
                                 <button class="btn-edit">
@@ -70,7 +72,7 @@
                                     <i class="fas fa-trash-alt"></i>
                                 </button>
                             </span>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -85,7 +87,7 @@
                     </div>
                     <ul class="list-group list-group-flush child">
                         <li class="list-group-item cause-line" id=problem1>
-                            <span class="data-view" data-group="problem" data-value="test 2">test 2</span>
+                            <span class="data-view" data-group="problem" data-value="rapidly growing emissions">rapidly growing emissions</span>
                             <span class="float-right">
                                 <button class="btn-edit">
                                     <i class="fas fa-pencil-alt"></i>
@@ -95,7 +97,7 @@
                                 </button>
                             </span>
                         </li>
-                        <li class="list-group-item cause-line" id=problem2>
+                        <!-- <li class="list-group-item cause-line" id=problem2>
                             <span class="data-view" data-group="problem" data-value="test 3">test 3</span>
                             <span class="float-right">
                                 <button class="btn-edit">
@@ -105,7 +107,7 @@
                                     <i class="fas fa-trash-alt"></i>
                                 </button>
                             </span>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -119,7 +121,18 @@
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <span class="data-view" data-group="effect" data-value="test 3">test 3</span>
+                            <span class="data-view" data-group="effect" data-value="global climate change">global climate change</span>
+                            <span class="float-right">
+                                <button class="btn-edit">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button> 
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="data-view" data-group="effect" data-value="local air pollution">local air pollution</span>
                             <span class="float-right">
                                 <button class="btn-edit">
                                     <i class="fas fa-pencil-alt"></i>
@@ -286,7 +299,7 @@
 
             selector.closest('li').remove();
 
-            drawLine()
+            setTimeout(function(){ drawLine() }, 1000);
         });
 
         var editModal = $('.edit-modal');
@@ -331,25 +344,15 @@
 
         });
 
-        $("#close-window").click(function(){
-            window.close();
-        });
-
-        $("#export-window").click(function(){
-            window.open('ghost-writer.html','_blank');
-        });
-
         function drawLine()
         {
-            $("#ropebag").find("svg").remove();
             /*
              * Starting line is the element with your set id and connects to an element with the class of the set id
              */
 
             //draw line from cause header to problem lists
-            $(".card-header.cause").bezier({ 
+            $("#cause-line").bezier({ 
                 strokeColor : '#686bf0',
-                class: "test"
             });
 
             //draw line from problem lists to effect header
