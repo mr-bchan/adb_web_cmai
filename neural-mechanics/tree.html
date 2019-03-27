@@ -200,6 +200,10 @@
     <script src="js/bezier.js"></script>
     <script type="text/javascript">
     $(document).ready(function($) {
+
+        responses = sessionStorage.getItem('responses');
+        console.log(JSON.parse(responses))
+
         var addModal = $('.add-modal');
         // on add event
         $('.btn-add').on('click', function(event) {
