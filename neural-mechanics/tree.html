@@ -21,12 +21,10 @@
             <img src="images/logo.png">
         </div>
         <div class="btn-menu">
-            <button class="btn btn-primary">Close</button>
+            <button class="btn btn-primary" id="close-window">Close</button>
             <button class="btn btn-primary">Save</button>
-            <button class="btn btn-primary">Export</button>
-            <a href="ghost-writer.html" target="_blank">    
-                <button class="btn btn-primary">Generate</button>
-            </a>
+            <button class="btn btn-primary" id="export-window">Export</button>
+            <button class="btn btn-primary">Generate</button>
         </div>
     </header>
     <section class="container-fluid">
@@ -72,7 +70,7 @@
                                     <i class="fas fa-trash-alt"></i>
                                 </button>
                             </span>
-                        </li> -->
+                        </li>-->
                     </ul>
                 </div>
             </div>
@@ -97,7 +95,7 @@
                                 </button>
                             </span>
                         </li>
-                        <!-- <li class="list-group-item cause-line" id=problem2>
+                        <!--<li class="list-group-item cause-line" id=problem2>
                             <span class="data-view" data-group="problem" data-value="test 3">test 3</span>
                             <span class="float-right">
                                 <button class="btn-edit">
@@ -107,7 +105,7 @@
                                     <i class="fas fa-trash-alt"></i>
                                 </button>
                             </span>
-                        </li> -->
+                        </li>-->
                     </ul>
                 </div>
             </div>
@@ -299,7 +297,7 @@
 
             selector.closest('li').remove();
 
-            setTimeout(function(){ drawLine() }, 1000);
+            drawLine()
         });
 
         var editModal = $('.edit-modal');
@@ -344,15 +342,25 @@
 
         });
 
+        $("#close-window").click(function(){
+            window.close();
+        });
+
+        $("#export-window").click(function(){
+            window.open('ghost-writer.html','_blank');
+        });
+
         function drawLine()
         {
+            $("#ropebag").find("svg").remove();
             /*
              * Starting line is the element with your set id and connects to an element with the class of the set id
              */
 
             //draw line from cause header to problem lists
-            $("#cause-line").bezier({ 
+            $(".card-header.cause").bezier({ 
                 strokeColor : '#686bf0',
+                class: "test"
             });
 
             //draw line from problem lists to effect header
