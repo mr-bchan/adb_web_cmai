@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/chat.css">
     <title>Neural Mechanics</title>
 </head>
 
@@ -24,7 +25,17 @@
             	<div class="div-header">
 	                <div class="div-download">
 	                	<button class="btn-primary btn">
-        					<i class="fa fa-download fa-3x icon" aria-hidden="true"></i>
+        					<!-- <i class="fa fa-download fa-3x icon" aria-hidden="true"></i> -->
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="180px" height="180px" viewBox="0 0 180 180" enable-background="new 0 0 180 180" xml:space="preserve">
+								<g>
+									<path fill="#FFFFFF" d="M81.403,128.385c6.586,6.585,10.34,6.841,17.188,0l50.364-51.622c4.728-7.967,0.858-14.48-8.596-14.48
+										h-22.644V12.391c0-6.12-4.969-11.087-11.085-11.087H73.37c-6.12,0-11.086,4.967-11.086,11.087v49.892H39.632
+										c-9.452,0-13.321,6.518-8.592,14.48L81.403,128.385z M167.611,150.979H12.391c-6.12,0-11.087,4.969-11.087,11.088v5.544
+										c0,6.124,4.967,11.085,11.087,11.085h155.221c6.119,0,11.085-4.961,11.085-11.085v-5.544
+										C178.696,155.948,173.73,150.979,167.611,150.979z"/>
+								</g>
+							</svg>
     					</button>
 	                </div>
 	            	<h2 class="title">Beijing Air Pollution</h2>
@@ -92,6 +103,121 @@
         </div>
         <div id="particles-js"></div>
     </header>
+    <div class="chat-div">
+        <div class="chat-box-wrapper">
+            <div class="chat-box">
+                <div class="chat-header text-center">Chat</div>
+                <div class="chat-convo">
+                    <div class="sender-wrapper">
+                        <div class="sender d-flex justify-content-start">
+                            <div class="sender-img-wrapper"><img src="images/robot.png"></div>
+                            <div class="sender-msg-wrapper">
+                                <div class="sender-msg">
+                                    <div class="sender-name">Customer Service</div>
+                                    <div class="sender-content">Welcome to ADB <br> How may I help you</div>
+                                </div>
+                                <div class="time-sent">
+                                    4:30 PM
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="receiver">
+                            <div class="receiver-msg-wrapper d-flex justify-content-end">
+                                <div class="receiver-msg">Hellow</div>
+                                <i class="invisible align-self-end sent fas fa-check-circle"></i>
+                            </div>
+                            <div class="d-none time-sent">
+                                4:30 PM
+                            </div>
+                    </div>
+                    <div class="receiver">
+                            <div class="receiver-msg-wrapper d-flex justify-content-end">
+                                <div class="receiver-msg">Can I process transactions <br> immediately after I download the app.</div><i class="align-self-end sent fas fa-check-circle"></i>
+                            </div>
+                            <div class="time-sent">
+                                4:30 PM
+                            </div>
+                    </div>
+                                    <div class="sender-wrapper">
+                        <div class="sender d-flex justify-content-start">
+                            <div class="sender-img-wrapper"><img src="images/robot.png"></div>
+                            <div class="sender-msg-wrapper">
+                                <div class="sender-msg">
+    <!--                                 <div class="sender-name">Customer Service</div>
+                                    <div class="sender-content">Welcome to ADB <br> How may I help you</div> -->
+                                    <div class="ticontainer">
+                                      <div class="tiblock">
+                                        <div class="tidot"></div>
+                                        <div class="tidot"></div>
+                                        <div class="tidot"></div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="d-none time-sent">
+                                    4:30 PM
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="receiver">
+                        <div class="receiver-msg-wrapper d-flex justify-content-end">
+                            <div class="receiver-msg">
+                                <div class="ticontainer">
+                                  <div class="tiblock">
+                                    <div class="tidot"></div>
+                                    <div class="tidot"></div>
+                                    <div class="tidot"></div>
+                                  </div>
+                                </div>
+                            </div><i class="d-none align-self-end sent fas fa-check-circle"></i>
+                        </div>
+                        <div class="d-none time-sent">
+                            4:30 PM
+                        </div>
+                    </div>
+                </div>
+                <form id="chat-form" class="d-flex justify-content-start">
+                    <!-- <input type="text" name="message" placeholder="Write a Message..."> -->
+                    <textarea name="message" placeholder="Write a Message..."></textarea>
+                    <button onclick="return false;">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             width="61.25px" height="61.25px" viewBox="0 0 61.25 61.25" enable-background="new 0 0 61.25 61.25" xml:space="preserve">
+                            <path fill="#B3BEC6" d="M31.708,31.348L7.363,33.705L0.955,54.196c-0.528,1.672,0.399,3.456,2.072,3.984
+                                c0.777,0.247,1.619,0.183,2.351-0.176l53.358-25.836c1.507-0.735,2.134-2.553,1.399-4.06c-0.297-0.609-0.79-1.101-1.399-1.398
+                                L5.416,0.855C3.84,0.084,1.938,0.737,1.168,2.313C0.81,3.045,0.747,3.887,0.992,4.665L7.4,25.155l24.299,2.356
+                                c1.055,0.105,1.825,1.043,1.721,2.099c-0.09,0.91-0.81,1.63-1.721,1.72L31.708,31.348z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="text-right">
+            <button class="btn-chat show">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="147.167px" height="149.167px" viewBox="0 0 147.167 149.167" enable-background="new 0 0 147.167 149.167"
+     xml:space="preserve">
+                    <title>1</title>
+                    <path fill="#FFFFFF" d="M122.578,1H24.422C11.763,1,1.5,11.457,1.5,24.369v65.987c0,0.486,0.02,0.964,0.048,1.443
+                        c-0.03,0.234-0.046,0.473-0.048,0.709v49.635c0,3.156,1.654,3.806,3.676,1.406l25.237-29.768h92.166
+                        c12.655,0,22.922-10.51,22.922-23.425V24.369C145.5,11.457,135.236,1,122.578,1z"/>
+                </svg>
+            </button>
+            <button class="btn-chat hide">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="180px" height="180px" viewBox="0 0 180 180" enable-background="new 0 0 180 180" xml:space="preserve">
+                    <g id="Close">
+                        <path fill="#FFFFFF" d="M111.393,90l64.178-64.177c5.907-5.907,5.907-15.485,0-21.392c-5.908-5.908-15.485-5.908-21.393,0
+                            L90,68.608L25.822,4.43c-5.907-5.908-15.484-5.908-21.392,0c-5.907,5.908-5.907,15.486,0,21.392l64.178,64.177L4.43,154.177
+                            c-5.907,5.907-5.907,15.485,0,21.392c5.908,5.908,15.485,5.908,21.392,0L90,111.392l64.178,64.177
+                            c5.906,5.908,15.484,5.908,21.393,0c5.907-5.907,5.907-15.484,0-21.392L111.393,90z"/>
+                    </g>
+                </svg>
+            </button>
+        </div>
+    </div>
     
     <!-- <footer>Footer here!</footer> -->
     <!-- Optional JavaScript -->
@@ -99,6 +225,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/chat.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script> -->
     <!-- scripts -->
     <script src="js/particles.js"></script>
