@@ -1,0 +1,85 @@
+html, body {
+	/*font-family: 'Roboto', sans-serif;*/
+	font-family: 'Quicksand', sans-serif;
+}
+
+body {
+	background: #f2f7fb;
+}
+
+header.header {
+	 background-image: url("../images/header-bg.png");
+	 padding: 15px;
+
+}
+
+header.header .app-name{
+	color: white;
+}
+
+header.header .btn.btn-primary{
+	min-width: 94px;
+ 	margin: 0 4px;
+}
+
+.btn.btn-primary {
+	background: #198ee0;
+	border-radius: 19px;
+
+}
+
+.card {
+	width: 90%;
+	margin: 0 auto;
+	/*z-index: 1;*/
+}
+
+.card-header {
+	color: #ffff;
+	font-size: 1.5rem;
+}
+
+.card-header.cause {
+	background: #686bf0;
+}
+
+.card-header.problem {
+	background: #f73a5a;
+}
+
+.card-header.effect {
+	background: #01cbcd;
+}
+
+
+.card  .card-header button{
+	border: 0;
+	margin: 0;
+	background: none;
+	color: #ffff;
+}
+
+
+.card ul li button{
+    border: 0;
+    margin: 0;
+    background: #dfe6ec;
+    color: #a4adb4;
+    border-radius: 13px;
+}
+
+.logo {
+	top: 3%;
+    right: 83%;
+    /*position: absolute;*/
+}
+
+.logo img {
+	width: 180px;
+}
+
+.related {
+	color: red;
+	z-index: 0;
+}
+

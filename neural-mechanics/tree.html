@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/tree.css">
+    <title>Neural Mechanics - Tree</title>
+</head>
+
+<body>
+    <header class="header d-flex justify-content-between align-items-center mb-4">
+        <div class="logo">
+            <img src="images/logo.png">
+        </div>
+        <div class="btn-menu">
+            <button class="btn btn-primary">Close</button>
+            <button class="btn btn-primary">Save</button>
+            <button class="btn btn-primary">Export</button>
+            <button class="btn btn-primary">Generate</button>
+        </div>
+    </header>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card cause">
+                    <div class="card-header cause" id="cause-line">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>Cause</span>
+                            <button data-title="Add Cause" data-group="cause" class="btn-add"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item asd">
+                            <span class="data-view" data-group="cause" data-value="test 1">test 1</span>
+                            <span class="float-right">
+                                <button class="btn-edit">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button> 
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </span>
+                        </li>
+                        <li class="list-group-item asd">
+                            <span class="data-view" data-group="cause" data-value="test 2">test 2</span>
+                            <span class="float-right">
+                                <button class="btn-edit">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button> 
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </span>
+                        </li>
+                        <li class="list-group-item asd">
+                            <span class="data-view" data-group="cause" data-value="test 3">test 3</span>
+                            <span class="float-right">
+                                <button class="btn-edit">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button> 
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card problem">
+                    <div class="card-header problem">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>Problem</span>
+                            <button data-title="Add Problem" data-group="problem" class="btn-add"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush child">
+                        <li class="list-group-item cause-line" id=problem1>
+                            <span class="data-view" data-group="problem" data-value="test 2">test 2</span>
+                            <span class="float-right">
+                                <button class="btn-edit">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button> 
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </span>
+                        </li>
+                        <li class="list-group-item cause-line" id=problem2>
+                            <span class="data-view" data-group="problem" data-value="test 3">test 3</span>
+                            <span class="float-right">
+                                <button class="btn-edit">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button> 
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card effect">
+                    <div class="card-header effect problem1 problem2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>Effect</span>
+                            <button data-title="Add Effect" data-group="effect" class="btn-add"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <span class="data-view" data-group="effect" data-value="test 3">test 3</span>
+                            <span class="float-right">
+                                <button class="btn-edit">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button> 
+                                <button class="btn-delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+    <div class="add-modal modal fade show" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- <p>Modal body text goes here.</p> -->
+                    <form>
+                        <input type="text" class="form-control" name="text" data-group="">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="edit-modal modal fade show" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="text-transform: capitalize;">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- <p>Modal body text goes here.</p> -->
+                    <form>
+                        <input type="text" class="form-control" name="text" data-group="">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!--     <script src="js/jQuery-v1.11.1.js"></script>
+ -->
+    <script src="js/jquery.connections.js"></script>
+    <script src="js/bezier.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function($) {
+        var addModal = $('.add-modal');
+        // on add event
+        $('.btn-add').on('click', function(event) {
+            event.preventDefault();
+            addModal.modal('show');
+            var title = $(this).attr('data-title');
+            var dataGroup = $(this).attr('data-group');
+            addModal.find('.modal-title').text(title);
+            addModal.find('input[name=text]').attr('data-group', dataGroup);
+        });
+
+        // modal on shown
+        addModal.on('shown.bs.modal', function() {
+            $(this).find('input[name=text]').focus();
+        });
+
+        // add modal on hidden
+        addModal.on('hidden.bs.modal', function() {
+            $(this).find('.modal-title').text("");
+            $(this).find('input[name=text]').attr('data-group', "");
+            $(this).find('input[name=text]').val("");
+        })
+
+        // add modal click event 
+        $('.add-modal .btn.btn-primary').on('click', function(event) {
+            event.preventDefault();
+            var input = $(this).closest('.add-modal').find('input[name=text]');
+            var inputGroup = input.attr('data-group');
+            var text = input.val();
+            var inputGroupUl = $('.card.' + inputGroup + ' ul.list-group');
+
+            if (text.trim().length <= 0) {
+                alert("Please fill in required fields.");
+                return;
+            }
+
+            input.val("");
+            input.attr('data-group', "");
+            addModal.modal('hide');
+
+            var listCount = inputGroupUl.find("li").length+1;
+
+            var liId = inputGroup+listCount;
+
+            /*var html = '<li class="list-group-item" id="'+liId+'">' +
+                '<span class="data-view" data-group="' + inputGroup + '" data-value="' + text + '">' + text + '</span>' +
+                '<span class="float-right">' +
+                '<button class="btn-edit"><i class="fas fa-pencil-alt"></i></button> ' +
+                '<button class="btn-delete"><i class="fas fa-trash-alt"></i></button>' +
+                '</span>' +
+                '</li>';
+
+            inputGroupUl.append(html);*/
+
+            let newLi = $("<li></li>").addClass("list-group-item").attr({
+                id: liId
+            });
+
+            let newSpan = $("<span></span>").addClass('data-view').attr({
+                "data-group": inputGroup,
+                "data-value": text,
+            }).text(text);
+
+            let newEditButton = $("<button></button>").addClass('btn-edit').append($("<i></i>").addClass('fas fa-pencil-alt'));
+            let newDeleteButton = $("<button></button>").addClass('btn-delete').append($("<i></i>").addClass('fas fa-trash-alt'));
+            let newSpanButton = $("<span></span>").addClass('float-right').append(newEditButton, " ",newDeleteButton);
+
+            if (inputGroup == 'problem') {
+                newLi.addClass("cause-line");
+                $(".card-header.effect").addClass(liId);
+            }
+            
+            newLi.append(newSpan, newSpanButton);
+
+            inputGroupUl.append(newLi);
+            drawLine()
+        });
+
+        $('.add-modal input[name="text"]').on('keypress', function(event) {
+            // event.preventDefault();
+            if (event.which == 13) {
+                $('.add-modal .btn.btn-primary').trigger('click');
+                event.preventDefault();
+            }
+
+        });
+
+        $(document).on('click', 'button.btn-delete', function(event) {
+            event.preventDefault();
+            var selector = $(this);
+
+            var liId = selector.closest('li').attr('id');
+
+            $(".card-header.effect").removeClass(liId);
+
+            selector.closest('li').remove();
+
+            setTimeout(function(){ drawLine() }, 1000);
+        });
+
+        var editModal = $('.edit-modal');
+        // on add event
+        $(document).on('click', '.btn-edit', function(event) {
+            event.preventDefault();
+            editModal.modal('show');
+            var dataGroup = $(this).closest('li').find('.data-view').attr('data-group');
+            var text = $(this).closest('li').find('.data-view').attr('data-value');
+            editModal.find('.modal-title').text('Edit ' + dataGroup);
+            editModal.find('input[name=text]').attr('data-group', dataGroup);
+            editModal.find('input[name=text]').val(text);
+            editModal.find('input[name=text]').attr('data-index', $(this).closest('li').index());
+            // console.log();
+        });
+
+        $('.edit-modal .btn.btn-primary').on('click', function(event) {
+            event.preventDefault();
+            var input = $(this).closest('.edit-modal').find('input[name=text]');
+            var inputGroup = input.attr('data-group');
+            var text = input.val();
+            var index = input.attr('data-index');
+            index = parseInt(index) + 1;
+            var selector = '.card.' + inputGroup + ' ul li:nth-child(' + index + ') .data-view';
+            $(selector).attr('data-value', text);
+            $(selector).html(text);
+            // console.log($(selector).html());
+            editModal.modal('hide');
+        });
+
+        // modal on shown
+        editModal.on('shown.bs.modal', function() {
+            $(this).find('input[name=text]').focus();
+        });
+
+        $('.edit-modal input[name="text"]').on('keypress', function(event) {
+            // event.preventDefault();
+            if (event.which == 13) {
+                $('.edit-modal .btn.btn-primary').trigger('click');
+                event.preventDefault();
+            }
+
+        });
+
+        function drawLine()
+        {
+            /*
+             * Starting line is the element with your set id and connects to an element with the class of the set id
+             */
+
+            //draw line from cause header to problem lists
+            $("#cause-line").bezier({ 
+                strokeColor : '#686bf0',
+            });
+
+            //draw line from problem lists to effect header
+            //for this case we need to connect all the problem list to the effect header so we targeted the classes of the problem list and each li element has their own id and is set to the class of the effect header
+            $(".cause-line").bezier({
+                strokeColor : '#01cbcd',
+            });
+        }
+
+        drawLine()
+    });
+    </script>
+</body>
+
+</html>

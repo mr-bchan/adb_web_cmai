@@ -3,7 +3,13 @@
 */
 
 // API Endpoint
-var API_ENDPOINT = 'http://neuralmechanics.ai/adb-api/'
+
+/* Prod setup */
+// var API_ENDPOINT = 'http://neuralmechanics.ai/adb-api/'
+
+/* Local setup */
+var API_ENDPOINT = 'http://0.0.0.0:8000/'
+
 
 // API POST URLs 
 var POST_PROBLEM_URL = API_ENDPOINT + 'get_problems'
