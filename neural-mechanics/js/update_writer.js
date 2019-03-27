@@ -16,7 +16,8 @@ function update_writer(data){
 	$('.div-content').empty()
 
 
-	httpPostAsync(comments=input_json, url=POST_PROBLEM_URL, 
+	texts = [data['keyword']].concat(data['phrases'])
+	httpPostAsync(comments=texts, url=POST_WRITER_URL, 
 		callback=function(data){
 
 		data = JSON.parse(data)['data']
