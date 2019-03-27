@@ -350,6 +350,21 @@
                 });
             });
         });
+
+
+        $('.btn-generate-tree').on('click', function(){
+
+            responses = {
+                'cause':['c1', 'c2', 'c3'],
+                'problem': ['p1', 'p2', 'p3'],
+                'effect': ['e1', 'e2','e3']
+            }
+
+            // Get children of UL Class .search-result-list
+            console.log($('.search-result-list').children())
+
+            sessionStorage.setItem('responses', JSON.stringify(responses));
+        });
     });
 
     </script>
