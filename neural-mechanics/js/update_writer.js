@@ -17,11 +17,11 @@ function update_writer(data){
 
 
 	texts = [data['keyword']].concat(data['phrases'])
-	httpPostAsync(comments=texts, url=POST_WRITER_URL, 
+	httpPostAsync(comments={'keyword':texts}, url=POST_WRITER_URL, 
 		callback=function(data){
 
 		data = JSON.parse(data)['data']
-		console.log(data)
+		//console.log(data)
 
 		data.forEach(function(d){
 			add_header(d['keyword'])
