@@ -128,3 +128,63 @@ header.header .btn.btn-primary{
 button:focus {
   outline: none;
 }
+
+.swing {
+  perspective: 100px;
+}
+
+.swing li.hide-list {
+  opacity: 0;
+  transform: rotateX(-90deg);
+  transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+.swing li.show-list {
+  opacity: 1;
+  transform: none;
+  transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+.animate-grow { 
+	transition: all .05s ease-in-out;
+	-webkit-transition: all .05s ease-in-out;
+    -moz-transition: all .05s ease-in-out;
+}
+
+.animate-grow:hover { 
+	transform: scale(1.1); 
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1,1) translate(0px, 0px);
+  }
+  
+  20%{
+    transform: scale(1,1) translate(0px, 0px); 
+  }
+
+  30%{
+    transform: scale(1,1) translate(0px, -20px); 
+  }
+}
+
+@-moz-keyframes moz-bounce {
+  0% {
+    -moz-transform: scale(1,1) translate(0px, 0px);
+  }
+  
+  20%{
+    -moz-transform: scale(1,1) translate(0px, 0px); 
+  }
+
+  30%{
+    -moz-transform: scale(1,1) translate(0px, -20px); 
+  }
+
+}
+
+.animate-bounce:hover {
+  -webkit-animation: bounce 0.8s infinite;
+  -moz-animation: moz-bounce 0.8s infinite;
+}
