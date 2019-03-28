@@ -58,7 +58,7 @@ header.header  .search-div {
 	padding: .4rem;
 	border-radius: .7rem;
 	/*cursor: pointer;*/
-	cursor: url("images/cursor_v3.png");
+	cursor: url("../images/cursor_v3.png"), auto;
 }
 
 .badge-blue {
