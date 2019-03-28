@@ -563,3 +563,12 @@ a.a-provided-by:hover {
       -webkit-animation: bounce 0.8s infinite;
       -moz-animation: moz-bounce 0.8s infinite;
 }
+
+.badge-cause {
+	background-color: #686af0;
+}
+
+.badge-effect {
+	background-color: #02cbcd;
+}
+
