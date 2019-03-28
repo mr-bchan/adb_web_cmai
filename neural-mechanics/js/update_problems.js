@@ -70,7 +70,7 @@ function update_problems(keyword){
 			})
 
 			// Update #div-result-header
-			result_text = results.length + ' results for ' + keyword
+			result_text = 'We found 'results.length + ' results for ' + keyword + ':'
 		    $('#div-result-header').text(result_text)
 
 
