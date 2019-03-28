@@ -61,7 +61,7 @@ function update_problems(keyword){
 			                    <div><span>Section: </span><span> ${result.section}</span></div>
 			                </div>
 			                <div>
-			                    <span class="badge badge-document">Document ${result.source}</span>
+			                    <span class="badge badge-document animate-grow">Document ${result.source}</span>
 			                </div>
 			            </div>
 			        </li>`
