@@ -56,6 +56,9 @@ function update_cause_effect(keyword){
 						    <div class="mb-3">
 						        <a href="${result.link}" target="_blank" class="a-provided-by">Source: ${result.source}</a>
 						    </div>
+						    <div>
+                       				    	<span class="badge badge-document animate-grow">Document ${result.source}</span>
+                  				    </div>
 						</div>
 						</div>`
 				
