@@ -135,7 +135,7 @@ section.section {
 .search-result-item-title {
 	
 	/*cursor: pointer;*/
-	cursor: url("images/cursor_v3.png"),pointer;
+	cursor: url("images/cursor_v3.png");
 	font-weight:500;
 }
 
@@ -324,7 +324,7 @@ aside.sidebar .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link .count {
     border: 0;
     padding: 0;
     /*cursor: pointer;*/
-	cursor: url("images/cursor_v3.png"),pointer;
+	cursor: url("images/cursor_v3.png");
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
