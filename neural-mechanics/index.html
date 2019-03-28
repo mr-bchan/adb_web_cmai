@@ -62,11 +62,11 @@ body {cursor: url("images/bubble.png"),auto;}
                     </form>
                     <div class="center">
                         <label class="topics-label">Topics</label>
-                        <span class="badge badge-primary">gender equality</span>
-                        <span class="badge badge-primary">environment</span>
-                        <span class="badge badge-primary">urban development</span>
-                        <span class="badge badge-primary">health</span>
-                        <span class="badge badge-primary">road traffic</span>
+                        <span class="badge topic-badge badge-primary">gender equality</span>
+                        <span class="badge topic-badge badge-primary">environment</span>
+                        <span class="badge topic-badge badge-primary">urban development</span>
+                        <span class="badge topic-badge badge-primary">health</span>
+                        <span class="badge topic-badge badge-primary">road traffic</span>
                     </div>
                 </div>
                 <!-- <div class="col-sm"></div> -->
@@ -458,6 +458,12 @@ body {cursor: url("images/bubble.png"),auto;}
             /* Act on the event */
         });
 
+
+        $(document).on("click", ".topic-badge", function(){
+            $(".txt-search")[0].value = $(this)[0].textContent
+            $('.btn-search').click()
+             
+        })
 
         $(document).on("click", ".search-result-item .search-result-item-title", function() {
             var isSelected = $(this).hasClass('selected');
